@@ -1,0 +1,47 @@
+<div class="myContainer" style="margin-top:20px;">
+  <div class="col-md-12 myRow">
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <h4>Record the result of a game</h4>
+      </div>
+      <div class="col-md-12">
+        <p class="formatControl" >Winner!</p>
+        <input type="text" placeholder="eg. alan, jack" [(ngModel)]="gameDetails.winner"/>
+      </div>
+      <div class="col-md-12 addTopMargin">
+        <p class="formatControl" >Loser:(</p>
+        <input type="text" placeholder="eg. alan, jack" [(ngModel)]="gameDetails.loser"/>
+      </div>
+      <div class="col-md-12 addTopMargin">
+        <p class="formatControl" >Description</p>
+        <textarea type="text" placeholder="" [(ngModel)]="gameDetails.description"></textarea>
+      </div>
+      <div class="col-md-12 addTopMargin">
+        <input class="btn btn-primary" type="button" value="Record" (click)="this.recordGameResult()"/>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <h4>Search a Player's Win Rate</h4>
+      </div>
+      <div class="col-md-12">
+        <p class="formatControl" >Player Name</p>
+        <input type="text" [(ngModel)]="playerName"/>
+      </div>
+      <div class="col-md-12 addTopMargin">
+        <input class="btn btn-primary" type="button" value="Search" (click)="this.searchPlayerWinRate()"/>
+      </div>
+      <div class="col-md-12 addTopMargin" style="padding-left: 0px;">
+        <div class="col-md-12">
+          Total Games: {{this.playerDetails.totalGames}}
+        </div>
+        <div class="col-md-12">
+          Winner Games: {{this.playerDetails.winGames}}
+        </div>
+        <div class="col-md-12">
+          Win Rate: {{this.playerDetails.winRate}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

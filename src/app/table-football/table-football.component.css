@@ -1,0 +1,17 @@
+.myContainer {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.myRow {
+    display: flex;
+}
+
+.formatControl {
+    margin-bottom: 0px;
+}
+
+.addTopMargin {
+    margin-top: 20px;
+}
